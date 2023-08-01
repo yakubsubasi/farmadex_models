@@ -10,7 +10,9 @@ Prescription _$PrescriptionFromJson(Map<String, dynamic> json) => Prescription(
       id: json['id'] as String?,
       name: json['name'] as String?,
       shortDescription: json['shortDescription'] as String?,
-      explanation: json['explanation'] as String?,
+      explanation: (json['explanation'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       medicines: (json['medicines'] as List<dynamic>?)
           ?.map((e) => Medicine.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -24,5 +26,5 @@ Map<String, dynamic> _$PrescriptionToJson(Prescription instance) =>
       'shortDescription': instance.shortDescription,
       'explanation': instance.explanation,
       'isIlyasYolbas': instance.isIlyasYolbas,
-      'medicines': instance.medicines?.map((e) => e.toJson()).toList()
+      'medicines': instance.medicines?.map((e) => e.toJson()).toList(),
     };

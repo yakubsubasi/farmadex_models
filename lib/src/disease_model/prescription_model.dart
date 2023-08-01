@@ -17,7 +17,7 @@ class Prescription {
   String? id;
   String? name;
   String? shortDescription;
-  String? explanation; // Tedavi ile ilgili ek açıklama
+  List<String>? explanation; // Tedavi ile ilgili ek açıklama
   bool isIlyasYolbas;
   List<Medicine>? medicines;
 
