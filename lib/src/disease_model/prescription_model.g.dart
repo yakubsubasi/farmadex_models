@@ -7,7 +7,7 @@ part of 'prescription_model.dart';
 // **************************************************************************
 
 Prescription _$PrescriptionFromJson(Map<String, dynamic> json) => Prescription(
-      id: json['id'] as String?,
+      id: json['id'] as int?,
       name: json['name'] as String?,
       shortDescription: json['shortDescription'] as String?,
       explanation: (json['explanation'] as List<dynamic>?)

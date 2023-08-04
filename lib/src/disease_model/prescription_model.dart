@@ -14,7 +14,7 @@ class Prescription {
       this.medicines,
       this.isIlyasYolbas = false});
 
-  String? id;
+  int? id;
   String? name;
   String? shortDescription;
   List<String>? explanation; // Tedavi ile ilgili ek açıklama

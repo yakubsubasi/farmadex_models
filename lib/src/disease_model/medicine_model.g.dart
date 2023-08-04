@@ -7,7 +7,7 @@ part of 'medicine_model.dart';
 // **************************************************************************
 
 Medicine _$MedicineFromJson(Map<String, dynamic> json) => Medicine(
-      id: json['id'] as String?,
+      id: json['id'] as int?,
       name: json['name'] as String?,
       activeSubstance: json['activeSubstance'] as String?,
       howOften: json['howOften'] as int?,

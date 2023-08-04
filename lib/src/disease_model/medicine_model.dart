@@ -15,7 +15,7 @@ class Medicine {
       this.numberOfBoxes,
       this.barkod});
 
-  String? id;
+  int? id;
   String? name;
   String? activeSubstance;
   int? howOften;
