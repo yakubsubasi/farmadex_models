@@ -1,17 +1,16 @@
 name: farmadex_models
 description: Base farmadex app models for all farmadex apps.
-version: 0.0.2
+version: 0.0.3
 homepage:
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
-  flutter: ">=1.17.0"
 
 dependencies:
   build_runner: ^2.4.6
-  flutter:
-    sdk: flutter
   json_annotation: ^4.8.1
   json_serializable: ^6.7.1
+dev_dependencies:
+  flutter_lints: ^3.0.1
 
 

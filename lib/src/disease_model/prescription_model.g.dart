@@ -16,6 +16,7 @@ Prescription _$PrescriptionFromJson(Map<String, dynamic> json) => Prescription(
       medicines: (json['medicines'] as List<dynamic>?)
           ?.map((e) => Medicine.fromJson(e as Map<String, dynamic>))
           .toList(),
+      tani: json['tani'] as String?,
       isIlyasYolbas: json['isIlyasYolbas'] as bool? ?? false,
     );
 
@@ -27,4 +28,5 @@ Map<String, dynamic> _$PrescriptionToJson(Prescription instance) =>
       'explanation': instance.explanation,
       'isIlyasYolbas': instance.isIlyasYolbas,
       'medicines': instance.medicines?.map((e) => e.toJson()).toList(),
+      'tani': instance.tani,
     };
