@@ -17,13 +17,15 @@ class Disease {
       this.prescriptions,
       this.searchText,
       this.shortDescription,
-      this.explanation});
+      this.explanation,
+      this.warnings});
 
   int? id;
   String? name;
   String? searchText;
   String? shortDescription;
   String? explanation;
+  List<String>? warnings = [];
   List<Speciality>? specialities;
   List<Prescription>? prescriptions;
 

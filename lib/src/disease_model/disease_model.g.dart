@@ -18,6 +18,9 @@ Disease _$DiseaseFromJson(Map<String, dynamic> json) => Disease(
       searchText: json['searchText'] as String?,
       shortDescription: json['shortDescription'] as String?,
       explanation: json['explanation'] as String?,
+      warnings: (json['warnings'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
     );
 
 Map<String, dynamic> _$DiseaseToJson(Disease instance) => <String, dynamic>{
@@ -26,6 +29,7 @@ Map<String, dynamic> _$DiseaseToJson(Disease instance) => <String, dynamic>{
       'searchText': instance.searchText,
       'shortDescription': instance.shortDescription,
       'explanation': instance.explanation,
+      'warnings': instance.warnings,
       'specialities':
           instance.specialities?.map((e) => _$SpecialityEnumMap[e]!).toList(),
       'prescriptions': instance.prescriptions?.map((e) => e.toJson()).toList(),
