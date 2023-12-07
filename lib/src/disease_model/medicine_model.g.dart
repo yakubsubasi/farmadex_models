@@ -10,7 +10,7 @@ Medicine _$MedicineFromJson(Map<String, dynamic> json) => Medicine(
       id: json['id'] as int?,
       name: json['name'] as String?,
       activeSubstance: json['active_substance'] as String?,
-      howOften: (json['how_often'] as num?)?.toDouble(),
+      howOften: json['how_often'] as int?,
       howMany: (json['how_many'] as num?)?.toDouble(),
       howToUse: json['how_to_use'] as String?,
       periode: json['periode'] as String?,

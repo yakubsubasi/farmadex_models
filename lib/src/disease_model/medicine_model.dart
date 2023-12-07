@@ -22,7 +22,7 @@ class Medicine {
   String? activeSubstance;
 
   @JsonKey(name: 'how_often')
-  double? howOften;
+  int? howOften;
 
   @JsonKey(name: 'how_many')
   double? howMany;
