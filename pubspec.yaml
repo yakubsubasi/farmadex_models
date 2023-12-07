@@ -1,6 +1,6 @@
 name: farmadex_models
 description: Base farmadex app models for all farmadex apps.
-version: 0.0.4
+version: 0.0.5
 homepage:
 
 environment:
