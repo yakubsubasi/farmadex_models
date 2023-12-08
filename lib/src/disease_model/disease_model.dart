@@ -21,12 +21,21 @@ class Disease {
       this.warnings});
 
   int? id;
+
   String? name;
+
+  @JsonKey(name: 'search_text')
   String? searchText;
+
+  @JsonKey(name: 'short_description')
   String? shortDescription;
+
   String? explanation;
+
   List<String>? warnings = [];
+
   List<Speciality>? specialities;
+
   List<Prescription>? prescriptions;
 
   factory Disease.fromJson(Map<String, dynamic> json) =>

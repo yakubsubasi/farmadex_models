@@ -17,6 +17,7 @@ class Prescription {
 
   int? id;
   String? name;
+  @JsonKey(name: 'short_description')
   String? shortDescription;
   List<String>? explanation; // Tedavi ile ilgili ek açıklama
   bool isIlyasYolbas;

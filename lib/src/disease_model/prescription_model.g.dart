@@ -9,7 +9,7 @@ part of 'prescription_model.dart';
 Prescription _$PrescriptionFromJson(Map<String, dynamic> json) => Prescription(
       id: json['id'] as int?,
       name: json['name'] as String?,
-      shortDescription: json['shortDescription'] as String?,
+      shortDescription: json['short_description'] as String?,
       explanation: (json['explanation'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -24,7 +24,7 @@ Map<String, dynamic> _$PrescriptionToJson(Prescription instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'shortDescription': instance.shortDescription,
+      'short_description': instance.shortDescription,
       'explanation': instance.explanation,
       'isIlyasYolbas': instance.isIlyasYolbas,
       'medicines': instance.medicines?.map((e) => e.toJson()).toList(),

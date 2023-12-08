@@ -15,8 +15,8 @@ Disease _$DiseaseFromJson(Map<String, dynamic> json) => Disease(
       prescriptions: (json['prescriptions'] as List<dynamic>?)
           ?.map((e) => Prescription.fromJson(e as Map<String, dynamic>))
           .toList(),
-      searchText: json['searchText'] as String?,
-      shortDescription: json['shortDescription'] as String?,
+      searchText: json['search_text'] as String?,
+      shortDescription: json['short_description'] as String?,
       explanation: json['explanation'] as String?,
       warnings: (json['warnings'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -26,8 +26,8 @@ Disease _$DiseaseFromJson(Map<String, dynamic> json) => Disease(
 Map<String, dynamic> _$DiseaseToJson(Disease instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'searchText': instance.searchText,
-      'shortDescription': instance.shortDescription,
+      'search_text': instance.searchText,
+      'short_description': instance.shortDescription,
       'explanation': instance.explanation,
       'warnings': instance.warnings,
       'specialities':
